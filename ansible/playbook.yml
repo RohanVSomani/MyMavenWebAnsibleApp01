@@ -8,3 +8,7 @@
         dest: "/opt/tomcat/webapps/MyMavenWebAnsibleApp01.war"
         remote_src: no
 
+    - name: Restart Tomcat
+      systemd:
+        name: tomcat
+        state: restarted
